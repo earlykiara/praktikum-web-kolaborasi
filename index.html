@@ -7,35 +7,106 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1 id="Judul Utama">halaman awal</h1>
-        <p>Platform Informasi Siswa</p>
+        <div class="header-content">
+            <span class="label">STUDENT INFORMATION SYSTEM</span>
+            <h1 id="judul-utama">Student Information</h1>
+            <p>Platform Informasi Siswa XI RPL 1</p>
+        </div>
     </header>
 
     <nav>
-        <a href="#">Beranda</a>
-        <a href="#">Profil</a>
-        <a href="#">Informasi</a>
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil</a>
+        <a href="#informasi">Informasi</a>
+        <a href="#pesan">Pesan</a>
     </nav>
-    
+
     <main>
-        <section>
-            <div class="kartu-profil">
-                <h2>Profil Siswa</h2>
+
+        <section class="hero" id="beranda">
+            <div class="hero-text">
+                <span class="welcome">SELAMAT DATANG</span>
+                <h2>Kenali Lebih Dekat<br>
+                    <span>Student Information</span>
+                </h2>
                 <p>
-                    Selamat datang di platform informasi siswa. Website ini sebagai praktikum pemrograman web kelas XI RPL 1.
+                    Website informasi siswa yang dirancang
+                    sebagai media pembelajaran dan praktikum
+                    pemrograman web kelas XI RPL 1.
                 </p>
+                <a href="#profil" class="tombol">
+                    Jelajahi Website
+                </a>
+            </div>
+
+        </section>
+
+        <section class="konten" id="profil">
+
+            <div class="judul-section">
+                <span>INFORMASI</span>
+                <h2>Profil Website</h2>
+                <p>Mengenal platform informasi siswa lebih dekat.</p>
+            </div>
+
+            <article class="kartu-container">
+
+                <div class="kartu">
+                    <h3>Informasi Sekolah</h3>
+                    <p>
+                        Menjadi media penyampaian informasi
+                        dan kegiatan sekolah.
+                    </p>
+                </div>
+
+                <div class="kartu">
+                    <h3>Praktikum Web</h3>
+                    <p>
+                        Dibuat sebagai bagian dari pembelajaran
+                        pemrograman web kelas XI RPL 1.
+                    </p>
+                </div>
+
+            </article>
+        </section>
+
+        <section class="informasi" id="informasi">
+            <span>XI REKAYASA PERANGKAT LUNAK 1</span>
+            <h2>Belajar, Berkarya, dan Berinovasi</h2>
+            <p>
+                Mengembangkan kreativitas dan keterampilan
+                melalui teknologi informasi.
+            </p>
+        </section>
+
+        <section class="bagian-pesan" id="pesan">
+            <div class="judul-section">
+                <span>FITUR INTERAKTIF</span>
+                <h2>Status Informasi</h2>
+                <p>Informasi status penyimpanan data.</p>
+            </div>
+
+            <div id="kotak-pesan">
+                <p id="pesanStatus">Sedang Memuat...</p>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 student information | XI RPL 1</p>
+        <p>&copy; 2026 Student Information | XI RPL 1</p>
+        <small>Created for Web Programming Practice</small>
     </footer>
 
     <script>
-        const judul = document.getElementByUId('Judul Utama');
-        judul.textContent = 'Selamat Datang di Platform Informasi Siswa';
+        const judul = document.getElementById('judul-utama');
+        judul.textContent = 'Student Information';
+
+        const pesan = document.getElementById('pesanStatus');
+        pesan.textContent = 'Data Berhasil Disimpan';
     </script>
+
 </body>
 </html>
